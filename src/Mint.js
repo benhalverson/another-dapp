@@ -66,7 +66,7 @@ const Mint = () => {
 				});
 		} else {
 			blockchain.smartContract.methods
-				.Mint(mintAmount)
+				.mint(mintAmount)
 				.send({
 					gasLimit: String(totalGasLimit),
 					to: CONFIG.CONTRACT_ADDRESS,
