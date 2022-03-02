@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import store from "./redux/store";
 import { Provider } from "react-redux";
 import "./styles/index.scss";
+import "./styles/index.css";
 
 ReactDOM.render(
 	<Provider store={store}>

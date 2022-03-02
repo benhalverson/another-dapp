@@ -1,4 +1,5 @@
 import React from "react";
+import FAQ from '../components/Faq';
 import Gallery from "../components/Gallery";
 import Team from "../components/Team";
 import Welcome from "../components/Welcome";
@@ -11,6 +12,7 @@ const Home = () => {
 			<Gallery />
 			<div className="breaker"></div>
 			{/* <Team /> */}
+			<FAQ />
 
 			<button>
 				<a href="/#header" className="scrollUp">
