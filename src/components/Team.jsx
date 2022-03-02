@@ -1,7 +1,7 @@
 import React from "react";
 import teamData from "../teamData";
 import { Link } from "react-router-dom";
-import "../styles/team.scss";
+import "../styles/Team.scss";
 const Team = () => {
 	return (
 		<div className="teamContainer" id="team">

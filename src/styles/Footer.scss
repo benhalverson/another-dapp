@@ -1,0 +1,30 @@
+@import "./colors";
+
+footer {
+	position: relative;
+	width: 100%;
+	padding-top: 5rem;
+	background-color: $gray;
+	color: $white;
+	display: block;
+	bottom: 0;
+	div {
+		position: relative;
+		width: 90%;
+		padding: 0.15rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		border-top: 1px solid $white;
+		margin: 0 auto;
+		span {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+			padding: 1rem;
+			font-size: clamp(0.8rem, 2vw, 1rem);
+		}
+	}
+}

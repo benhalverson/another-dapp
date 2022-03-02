@@ -1,0 +1,67 @@
+@import "./colors";
+
+header {
+	position: relative;
+	width: 100%;
+	padding: 0.15rem;
+	background-color: $gray;
+	color: $white;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	span {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+		padding: 1rem;
+		font-size: clamp(0.8rem, 2vw, 1rem);
+		.buttonsContainer {
+			width: 20vw;
+			max-width: 300px;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-around;
+			position: relative;
+			font-size: inherit;
+			margin-left: 1rem;
+			@media screen and (max-width: 1000px) {
+				& {
+					margin-left: 2rem;
+				}
+			}
+			@media screen and (max-width: 520px) {
+				& {
+					margin-left: 3rem;
+				}
+			}
+			@media screen and (max-width: 420px) {
+				& {
+					margin-left: 3.5rem;
+				}
+			}
+			a {
+				padding: 0.5rem;
+				border-radius: 0.5rem;
+				transition: background-color 100ms ease-in-out;
+				font-size: 1em;
+				&:hover {
+					background-color: lighten($gray, 10);
+				}
+				@media screen and (max-width: 330px) {
+					& {
+						display: none;
+					}
+				}
+			}
+		}
+		.img {
+			position: relative;
+			width: 2.5rem;
+			height: 2.5rem;
+			border-radius: 50%;
+		}
+	}
+}

@@ -1,96 +1,82 @@
 @import "./colors";
 html {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 	body {
 		background-color: $white;
 		margin: 0;
 		font-family: sans-serif;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		ol,
-		ul {
-			list-style: none;
-		}
-		html,
-		body,
-		div,
-		span,
-		applet,
-		object,
-		iframe,
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6,
-		p,
 		a {
-			margin: 0;
-			padding: 0;
-			border: 0;
-			font-size: 100%;
-			font: inherit;
-			vertical-align: baseline;
+			text-decoration: none;
+			color: inherit;
+			cursor: pointer;
 		}
 	}
 }
-.main {
-	width: 100vw;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-}
 
-.border-radius3 {
-	border-radius: 3rem;
-}
-.border-radius2 {
-	border-radius: 2rem;
-}
-.bg-main {
-	background-color: $gray;
-}
-.bg-main-hover:hover {
-	background-color: lighten($gray, 3.5);
-}
-.bg-prim {
-	background-color: $primary;
-}
-.bg-prim-hover:hover {
-	background-color: darken($primary, 3.5);
-}
-.bg-second {
-	background-color: $secondry;
-}
-
-.text-prim {
-	color: $primary;
-}
-.text-second {
-	color: darken($secondry, 1.5);
+.mintWeb {
+	width: 100%;
+	height: 80vh;
+	.main {
+		width: 80%;
+		padding: 3rem;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		background-color: white;
+		color: black;
+		border-radius: 3rem;
+		margin: 5rem auto;
+		line-height: 2rem;
+		font-size: 1.2rem;
+		font-weight: 700;
+		h1 {
+			font-size: 2rem;
+			color: $primary;
+			font-weight: 800;
+		}
+		.contractAdd {
+			color: $secondry;
+			font-size: 0.9em;
+			font-weight: 600;
+		}
+		.connectBtn {
+			margin: 1rem;
+			font-weight: 700;
+			padding: 1rem;
+			border-radius: 1rem;
+			background-color: darken($primary, 1.2);
+			color: darken($secondry, 1.2);
+			transition: all 100ms ease-in-out;
+			outline: none;
+			border: transparent;
+			&:hover {
+				filter: brightness(0.85);
+			}
+		}
+	}
 }
 
 .scrollUp {
 	position: fixed;
 	right: 0;
 	bottom: 0;
-	width: clamp(3rem, 15vw, 5rem);
-	height: clamp(3rem, 15vw, 5rem);
+	padding: 1rem;
+	font-size: 1rem;
 	border-radius: 50%;
 	background-color: $secondry;
 	color: $primary;
 	margin: 0.5rem;
 	transition: transform 0.2s ease-in-out;
+	z-index: 30;
 }
 .scrollUp:hover,
 .scrollUp:active {
@@ -98,7 +84,125 @@ html {
 }
 .breaker {
 	width: 80%;
-	height: 0.25rem;
-	background-color: #e5e7eb;
+	height: 3px;
+	background-color: darken(white, 3);
 	margin: 2rem auto;
+	border-radius: 3rem;
+}
+.twitter {
+	padding: 0.1rem 0.2rem;
+	border-radius: 0.5rem;
+	transition: background-color 100ms ease-in-out;
+	font-size: 1em;
+	&:hover {
+		background-color: lighten($gray, 10);
+	}
+}
+.welcome {
+	width: 80%;
+	background-color: white;
+	padding: 3rem;
+	border-radius: 3rem;
+	margin: 2rem auto;
+	font-size: 1.5rem;
+	text-align: center;
+	div {
+		margin: 1rem 0;
+		font-size: inherit;
+		span {
+			font-size: 1.8em;
+			font-weight: 800;
+			&:first-child {
+				color: $primary;
+			}
+			&:nth-child(2) {
+				color: $secondry;
+			}
+		}
+		a {
+			margin: 1rem;
+			font-weight: 700;
+			padding: 1rem;
+			border-radius: 1rem;
+			background-color: darken($primary, 1.2);
+			color: darken($secondry, 1.2);
+			transition: all 100ms ease-in-out;
+			&:hover {
+				filter: brightness(0.85);
+			}
+		}
+	}
+	p {
+		margin: 1rem 0 2rem 0;
+	}
+}
+
+.cells {
+	width: 100%;
+	margin: 2rem auto;
+	font-size: 1.5rem;
+	text-align: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+	@media screen and (max-width: 800px) {
+		& {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+	@media screen and (min-width: 1800px) {
+		& {
+			grid-template-columns: repeat(auto-fit, minmax(900px, 1fr));
+		}
+	}
+	place-items: center;
+	gap: 1rem;
+	height: 100%;
+	span {
+		width: 650px;
+		@media screen and (max-width: 800px) {
+			& {
+				width: 80%;
+			}
+		}
+		@media screen and (min-width: 1800px) {
+			& {
+				width: 900px;
+			}
+		}
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img,
+		p {
+			width: 90%;
+			height: 90%;
+			border-radius: 3rem;
+		}
+		p {
+			background-color: white;
+			padding: 5rem;
+			line-height: 1.2em;
+		}
+	}
+	.doubleCell {
+		display: block;
+		div {
+			margin: 1rem 0;
+		}
+	}
+}
+
+.err {
+	width: 100%;
+	height: 80vh;
+	.error {
+		width: 80%;
+		background-color: white;
+		padding: 10rem;
+		border-radius: 3rem;
+		margin: 2rem auto;
+		font-size: 1.5rem;
+		text-align: center;
+	}
 }
