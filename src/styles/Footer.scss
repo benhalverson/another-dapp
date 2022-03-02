@@ -25,14 +25,5 @@ footer {
 			padding: 1rem;
 			font-size: clamp(0.8rem, 2vw, 1rem);
 		}
-		.twitter {
-			padding: 0.2rem;
-			border-radius: 0.5rem;
-			transition: background-color 100ms ease-in-out;
-			font-size: 1em;
-			&:hover {
-				background-color: lighten($gray, 10);
-			}
-		}
 	}
 }

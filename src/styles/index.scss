@@ -1,6 +1,7 @@
 @import "./colors";
 html {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 * {
 	box-sizing: border-box;
@@ -17,6 +18,7 @@ html {
 		}
 	}
 }
+
 .main {
 	width: 100vw;
 	position: relative;
@@ -44,9 +46,90 @@ html {
 	transform: scale(1.05);
 }
 .breaker {
-	width: 90%;
-	height: 1px;
-	background-color: #e5e7eb;
+	width: 80%;
+	height: 3px;
+	background-color: darken(white, 3);
 	margin: 2rem auto;
 	border-radius: 3rem;
+}
+.twitter {
+	padding: 0.1rem 0.2rem;
+	border-radius: 0.5rem;
+	transition: background-color 100ms ease-in-out;
+	font-size: 1em;
+	&:hover {
+		background-color: lighten($gray, 10);
+	}
+}
+.welcome {
+	width: 80%;
+	background-color: white;
+	padding: 3rem;
+	border-radius: 3rem;
+	margin: 2rem auto;
+	font-size: 1.5rem;
+	text-align: center;
+	div {
+		margin: 1rem 0;
+		font-size: inherit;
+		span {
+			font-size: 1.8em;
+			font-weight: 800;
+			&:first-child {
+				color: $primary;
+			}
+			&:nth-child(2) {
+				color: $secondry;
+			}
+		}
+		a {
+			margin: 1rem;
+			font-weight: 700;
+			padding: 1rem;
+			border-radius: 1rem;
+			background-color: darken($primary, 1.2);
+			color: darken($secondry, 1.2);
+			transition: all 100ms ease-in-out;
+			&:hover {
+				filter: brightness(0.85);
+			}
+		}
+	}
+	p {
+		margin: 1rem 0 2rem 0;
+	}
+}
+
+.cells {
+	width: 100%;
+	margin: 2rem auto;
+	font-size: 1.5rem;
+	text-align: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+	place-items: center;
+	gap: 1rem;
+	height: 100%;
+	span {
+		width: 650px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img,
+		p {
+			width: 90%;
+			height: 90%;
+			border-radius: 3rem;
+		}
+		p {
+			background-color: white;
+			padding: 2rem;
+		}
+	}
+	.doubleCell {
+		display: block;
+		div {
+			margin: 1rem 0;
+		}
+	}
 }

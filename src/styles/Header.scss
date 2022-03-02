@@ -63,14 +63,5 @@ header {
 			height: 2.5rem;
 			border-radius: 50%;
 		}
-		.twitter {
-			padding: 0.2rem;
-			border-radius: 0.5rem;
-			transition: background-color 100ms ease-in-out;
-			font-size: 1em;
-			&:hover {
-				background-color: lighten($gray, 10);
-			}
-		}
 	}
 }
