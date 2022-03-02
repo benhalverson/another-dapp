@@ -11,6 +11,12 @@ const Home = () => {
 			<Gallery />
 			<div className="breaker"></div>
 			<Team />
+
+			<button>
+				<a href="/#header" className="scrollUp">
+					▲
+				</a>
+			</button>
 		</div>
 	);
 };

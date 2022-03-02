@@ -6,8 +6,10 @@ const Welcome = () => {
 				<span>Support</span> <span>Ukraine</span>
 			</div>
 			<p>
-				Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat
-				veniam occaecat fugiat aliqua.
+				This is your chance to make up for all of the failed NFT projects you’ve spent money on by investing in helping
+				others in need. When you donate to the Stay Strong Ukraine NFT, you help Ukrainians survive another day during
+				these difficult times. In return, you will get a unique NFT to certify your support, but more importantly, you
+				will help protect families across the country!
 			</p>
 			<div>
 				<Link to="/mint">Donate</Link>

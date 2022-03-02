@@ -121,128 +121,74 @@ const Mint = () => {
 	}, [blockchain.account]);
 
 	return (
-		<div className="main">
-			<div
-				style={{
-					textAlign: "left",
-					fontSize: 50,
-					letterspacing: 1,
-					color: "yellow",
-				}}
-			>
-				Stand with Ukraine
-			</div>
+		<div className="mintWeb">
+			<div className="main">
+				<h1>Stand with Ukraine</h1>
 
-			<div
-				style={{
-					textAlign: "center",
-					color: "var(--primary-text)",
-				}}
-			>
-				<a target={"_blank"} href={CONFIG.SCAN_LINK}>
-					{truncate(CONFIG.CONTRACT_ADDRESS, 5)}
-				</a>
-			</div>
-			{Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
-				<>
-					<div style={{ textAlign: "center", color: "var(--accent-text)" }}>Sold out!!!</div>
-					<div style={{ textAlign: "center", color: "var(--accent-text)" }}>
-						You can still find {CONFIG.NFT_NAME} on
-					</div>
-					<a target={"_blank"} href={CONFIG.MARKETPLACE_LINK}>
-						{CONFIG.MARKETPLACE}
+				<div className="contractAdd">
+					<a target={"_blank"} href={CONFIG.SCAN_LINK}>
+						{truncate(CONFIG.CONTRACT_ADDRESS, 5)}
 					</a>
-				</>
-			) : (
-				<>
-					<div style={{ textAlign: "center", color: "#005BBB", fontSize: 35 }}>
-						Help Ukraine, Mint your nft today , Lets make a change!!!
-					</div>
+				</div>
+				{Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
+					<>
+						<div>Sold out!!!</div>
+						<div>You can still find {CONFIG.NFT_NAME} on</div>
+						<a target={"_blank"} href={CONFIG.MARKETPLACE_LINK}>
+							{CONFIG.MARKETPLACE}
+						</a>
+					</>
+				) : (
+					<>
+						<div>Help Ukraine, Mint your nft today , Lets make a change!!!</div>
 
-					{blockchain.account === "" || blockchain.smartContract === null ? (
-						<div>
-							<div
-								style={{
-									textAlign: "center",
-									color: "var(--accent-text)",
-								}}
-							>
-								Connect your {CONFIG.NETWORK.NAME} wallet.
+						{blockchain.account === "" || blockchain.smartContract === null ? (
+							<div>
+								<div>Connect your {CONFIG.NETWORK.NAME} wallet.</div>
+								<button
+									className="connectBtn"
+									onClick={(e) => {
+										e.preventDefault();
+										dispatch(connect());
+										getData();
+									}}
+								>
+									CONNECT
+								</button>
+								{blockchain.errorMsg !== "" ? (
+									<>
+										<div>{blockchain.errorMsg}</div>
+									</>
+								) : null}
 							</div>
-							<button
-								onClick={(e) => {
-									e.preventDefault();
-									dispatch(connect());
-									getData();
-								}}
-							>
-								CONNECT
-							</button>
-							{blockchain.errorMsg !== "" ? (
-								<>
-									<div
-										style={{
-											textAlign: "center",
-											color: "var(--accent-text)",
-										}}
-									>
-										{blockchain.errorMsg}
-									</div>
-								</>
-							) : null}
-						</div>
-					) : (
-						<>
-							<div
-								style={{
-									textAlign: "center",
-									color: "var(--accent-text)",
-								}}
-							>
-								{feedback}
-								{feedback2}
-							</div>
+						) : (
+							<>
+								<div>
+									{feedback}
+									{feedback2}
+								</div>
 
-							<div
-								style={{
-									fontSize: 25,
-									textAlign: "center",
-									color: "#005BBB",
-								}}
-							>
-								{data.totalSupply} / {CONFIG.MAX_SUPPLY}
-							</div>
-							<input
-								style={{
-									width: "200px",
-									height: "50px",
-									fontSize: "2rem",
-									textAlign: "center",
-									borderRadius: "30px",
-									backgroundColor: "white",
-									borderColor: "yellow",
-									borderWidth: "5px",
-								}}
-								type="text"
-								value={dontated}
-								onChange={donationFund}
-							/>
+								<div>
+									{data.totalSupply} / {CONFIG.MAX_SUPPLY}
+								</div>
+								<input type="text" value={dontated} onChange={donationFund} />
 
-							<button
-								disabled={claimingNft ? 1 : 0}
-								onClick={(e) => {
-									//hi
-									e.preventDefault();
-									claimNFTs();
-									getData();
-								}}
-							>
-								{claimingNft ? "BUSY" : "MINT"}
-							</button>
-						</>
-					)}
-				</>
-			)}
+								<button
+									disabled={claimingNft ? 1 : 0}
+									onClick={(e) => {
+										//hi
+										e.preventDefault();
+										claimNFTs();
+										getData();
+									}}
+								>
+									{claimingNft ? "BUSY" : "MINT"}
+								</button>
+							</>
+						)}
+					</>
+				)}
+			</div>
 		</div>
 	);
 };

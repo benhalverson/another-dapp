@@ -12,8 +12,14 @@ const Gallery = () => {
 			</span>
 			<span id="about">
 				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem veritatis amet nam nulla porro maiores
-					itaque inventore optio provident, saepe repellendus quasi autem a nemo velit similique minus sit magni?
+					More than 800,000 civilians have fled Ukraine due to the war, according to the UN. The number of people
+					fleeing the country is expected to reach 4,000,000 civilians. <br />
+					<br />
+					Families are being broken apart because the fighting-age men must stay to fight for Ukraine. Women and
+					children are the most vulnerable in a family and are forced to flee with little to no resources. <br />
+					<br />
+					Would you like to help? 100% of the funds raised are sent to official wallets of the Ukrainian government and
+					relevant organizations which may be verified on the Ethereum blockchain.
 				</p>
 			</span>
 			<span className="doubleCell">

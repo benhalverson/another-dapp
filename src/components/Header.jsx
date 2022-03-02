@@ -13,7 +13,7 @@ const navigation = [
 
 const Header = () => {
 	return (
-		<header>
+		<header id="header">
 			<span>
 				<Link to="/">
 					<img src={logo} alt="Logo" className="img" />
