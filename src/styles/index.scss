@@ -1,0 +1,104 @@
+@import "./colors";
+html {
+	scroll-behavior: smooth;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	body {
+		background-color: $white;
+		margin: 0;
+		font-family: sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		ol,
+		ul {
+			list-style: none;
+		}
+		html,
+		body,
+		div,
+		span,
+		applet,
+		object,
+		iframe,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		p,
+		a {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+	}
+}
+.main {
+	width: 100vw;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.border-radius3 {
+	border-radius: 3rem;
+}
+.border-radius2 {
+	border-radius: 2rem;
+}
+.bg-main {
+	background-color: $gray;
+}
+.bg-main-hover:hover {
+	background-color: lighten($gray, 3.5);
+}
+.bg-prim {
+	background-color: $primary;
+}
+.bg-prim-hover:hover {
+	background-color: darken($primary, 3.5);
+}
+.bg-second {
+	background-color: $secondry;
+}
+
+.text-prim {
+	color: $primary;
+}
+.text-second {
+	color: darken($secondry, 1.5);
+}
+
+.scrollUp {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	width: clamp(3rem, 15vw, 5rem);
+	height: clamp(3rem, 15vw, 5rem);
+	border-radius: 50%;
+	background-color: $secondry;
+	color: $primary;
+	margin: 0.5rem;
+	transition: transform 0.2s ease-in-out;
+}
+.scrollUp:hover,
+.scrollUp:active {
+	transform: scale(1.05);
+}
+.breaker {
+	width: 80%;
+	height: 0.25rem;
+	background-color: #e5e7eb;
+	margin: 2rem auto;
+}
