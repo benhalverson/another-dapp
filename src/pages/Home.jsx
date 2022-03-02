@@ -10,7 +10,7 @@ const Home = () => {
 			<div className="breaker"></div>
 			<Gallery />
 			<div className="breaker"></div>
-			<Team />
+			{/* <Team /> */}
 
 			<button>
 				<a href="/#header" className="scrollUp">
