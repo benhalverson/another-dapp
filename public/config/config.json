@@ -6,11 +6,11 @@
     "SYMBOL": "ETH",
     "ID": 4
   },
-  "NFT_NAME": "BaseBallers NFT",
-  "SYMBOL": "BBNFT",
+  "NFT_NAME": "Stand with Ukraine",
+  "SYMBOL": "SUU",
   "MAX_SUPPLY": 7000,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Opeansea",
-  "MARKETPLACE_LINK": "https://opensea.io/collection/nerdy-coder-clones",
+  "MARKETPLACE_LINK": "",
   "SHOW_BACKGROUND": true
 }
