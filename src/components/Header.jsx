@@ -8,7 +8,6 @@ const navigation = [
 	{ name: "Mint", href: "/mint" },
 	{ name: "About", href: "/#about" },
 	{ name: "FAQ", href: "/#faq" },
-	{ name: "Team", href: "/#team" },
 ];
 
 const Header = () => {
